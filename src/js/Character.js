@@ -1,5 +1,5 @@
 export default class Character {
-    constructor(name, type, attack, defence) {
+    constructor(name, type) {
         const heroes = [
             'Bowerman',
             'Swordsman',
@@ -12,7 +12,7 @@ export default class Character {
         if ( name && 2 <= name.length <= 10 ) { 
             this.name = name 
         } else { 
-            throw new Error('Придумайте другое имя!')
+            throw new Error('Имя персонажа не должно быть меньше 2 символов и не больше - 10 символов')
           }
 
         if ( heroes.includes(type) ) {
@@ -23,8 +23,8 @@ export default class Character {
 
         this.health = 100;
         this.level = 1;
-        this.attack = attack;
-        this.defence = defence;
+        this.attack = undefined;
+        this.defence = undefined;
     }
 
     levelUp() {

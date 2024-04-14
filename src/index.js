@@ -1,3 +1,3 @@
 import './css/style.css';
 
-import './js/hero';
+import './js/Character';
